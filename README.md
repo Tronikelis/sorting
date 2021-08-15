@@ -1,6 +1,6 @@
 # My try at implementing Mergesort & Quicksort
 
-```
+```typescript
 import { quicksort, mergesort } from "./algorithms";
 
 // one million length array of random numbers with .xxxxx decimal places
@@ -26,3 +26,5 @@ console.time("mergesort");
 mergesort(arr);
 console.timeEnd("mergesort"); // ~ 13s the implementation is really bad lol
 ```
+
+The mergesort implementation is really bad lmao
