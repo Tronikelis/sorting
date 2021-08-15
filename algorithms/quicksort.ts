@@ -1,6 +1,5 @@
 /**
  * My implementation of the quicksort algorithm,
- * @returns {Number[]} Returns a sorted array
  */
 export default function quicksort(array: number[]): number[] {
     let newArr = [...array];

@@ -1,4 +1,6 @@
-
+/**
+ * A really bad implementation of mergesort, it's small tho!
+ */
 export default function mergesort(array: number[]) {
     // this is just so that it returns a new array, not the input array
     return sort([...array]);
