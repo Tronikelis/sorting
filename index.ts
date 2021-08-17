@@ -1,24 +1,33 @@
-import { quicksort, mergesort } from "./algorithms";
+import { quicksort, mergesort, bubblesort } from "./algorithms";
 
-// one million length array of random numbers with .xxxxx decimal places
-const arr = Array(1000000).fill(0).map(x => Number((Math.random() * 1000).toFixed(5)))
-
+// one 100k length array of random numbers with decimal places
+const arr = Array(100000)
+    .fill(0)
+    .map((x) => Math.random() * 10000);
 /**
- * Benchmarks 
+ * Benchmarks
 */
 
 console.time("quicksort");
 quicksort(arr);
-console.timeEnd("quicksort"); // ~ 120ms
+console.timeEnd("quicksort"); // ~ 16ms
 
 console.log("\n");
 
 console.time("js sort");
 arr.sort((a, b) => a - b);
-console.timeEnd("js sort"); // ~ 500ms
+console.timeEnd("js sort"); // ~ 46ms
 
 console.log("\n");
 
 console.time("mergesort");
 mergesort(arr);
-console.timeEnd("mergesort"); // ~ 13s the implementation is really bad lol
+console.timeEnd("mergesort"); // ~ 128ms
+
+console.log("\n");
+
+console.time("bubblesort");
+bubblesort(arr);
+console.timeEnd("bubblesort"); // ~ 7s
+
+console.log("\n");
