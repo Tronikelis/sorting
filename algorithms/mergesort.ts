@@ -19,12 +19,14 @@ export default function mergesort(array: number[]) {
     function merge(left: number[], right: number[]) {
         let sorted = [];
 
-        while (left.length > 0 && right.length > 0) {
+        while (left.length && right.length) {
             if (left[0] < right[0]) sorted.push(left.shift());
             else sorted.push(right.shift());
         };
+        if (left.length) sorted.concat(left);
+        if (right.length) sorted.concat(right);
 
-        return [...sorted, ...left, ...right];
+        return sorted;
     };
 };
 
